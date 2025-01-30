@@ -1,5 +1,7 @@
 {
   "name": "app-controle-financeiro",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular-standalone"
 }

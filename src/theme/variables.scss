@@ -1,2 +1,41 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+body{
+  margin: 0px;
+}
+html{
+  overflow: hidden;
+}
+
+// FONT'S
+
+@font-face {
+  font-family: OpenSans;
+  src: url(../assets/fonts/OpenSans/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto-bold;
+  src: url(../assets/fonts/Roboto/Roboto-Bold.ttf);
+}
+
+h1,h2,h5{
+  font-family: OpenSans;
+  font-weight: 700;
+}
+
+h3,h4{
+  font-family: 'Roboto';
+
+}
+label{
+  color: #787878;
+  font-family: 'OpenSans';
+  font-size: 14px;
+  font-weight: 700;
+
+}

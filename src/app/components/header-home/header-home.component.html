@@ -1,34 +1,40 @@
-
-  <div class="toolbar">
+<div class="toolbar">
   <div class="container">
     <div class="container__info">
-       <div class="info__logo">
+      <div class="info__logo">
         <ion-thumbnail>
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          <img
+            alt="Silhouette of mountains"
+            src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+          />
         </ion-thumbnail>
 
         <label for="">Olá..Turco!</label>
-       </div>
-       <div class="info__alerts">
-        <ion-icon name="notifications"></ion-icon>
-        <ion-icon name="list"></ion-icon>
-       </div>
-
+      </div>
+      <div class="info__alerts">
+        <ion-icon name="notifications" class="icon-20"></ion-icon>
+        <ion-icon name="list" class="icon-20"></ion-icon>
+      </div>
     </div>
 
     <div class="container__balance">
-       <div class="balance__text">
+      <div class="balance__text">
         <label for="">Saldo geral</label>
-       </div>
-       <div class="balance">
-
+      </div>
+      <div class="balance">
+        <ng-container *ngIf="balance; else hideBalance">
           <label for="">R$ 100.00</label>
-          <ion-icon name="list"></ion-icon>
-        </div>
+        </ng-container>
+        <ng-template #hideBalance>
+          <label for="">*****</label>
+        </ng-template>
+        <ng-container *ngIf="balance; else hideEye">
+          <ion-icon name="eye-off-outline" (click)="hide()" class="icon-20"></ion-icon>
+        </ng-container>
+        <ng-template #hideEye>
+            <ion-icon name="eye-outline" (click)="show()" class="icon-20"></ion-icon>
+          </ng-template>
+      </div>
     </div>
-
-
-
   </div>
-  </div>
-
+</div>
